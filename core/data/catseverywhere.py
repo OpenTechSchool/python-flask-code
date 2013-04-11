@@ -11,7 +11,7 @@ email_addresses = []
 def hello_world():
     return render_template('index.html')
 
-@app.route('/signup.html', methods = ['POST'])
+@app.route('/signup', methods = ['POST'])
 def signup():
     email = request.form['email']
     email_addresses.append(email)
