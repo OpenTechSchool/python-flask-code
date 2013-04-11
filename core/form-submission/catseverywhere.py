@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hello_world():
     return render_template('index.html')
 
-@app.route('/signup.html', methods = ['POST'])
+@app.route('/signup', methods = ['POST'])
 def signup():
     email = request.form['email']
     print("The email address is '" + email + "'")
