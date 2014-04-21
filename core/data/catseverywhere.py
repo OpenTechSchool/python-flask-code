@@ -11,7 +11,7 @@ email_addresses = []
 def hello_world():
     return render_template('index.html')
 
-@app.route('/signup', methods = ['POST'])
+@app.route('/signup', methods=['POST'])
 def signup():
     email = request.form['email']
     email_addresses.append(email)
@@ -20,7 +20,7 @@ def signup():
 
 @app.route('/emails.html')
 def emails():
-    return render_template('emails.html', email_addresses = email_addresses)
+    return render_template('emails.html', email_addresses=email_addresses)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
